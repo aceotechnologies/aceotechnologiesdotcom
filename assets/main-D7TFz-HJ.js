@@ -1,0 +1,1 @@
+var e=document.querySelector("#nav-open"),a=document.querySelector("#nav-opened"),d=document.querySelector("#close_nav");e.onclick=()=>{a.hidden=!a.hidden,e.ariaHidden=!e.ariaHidden,e.ariaExpanded=!e.ariaExpanded};d.onclick=()=>{a.hidden=!a.hidden,e.ariaHidden=!e.ariaHidden,e.ariaExpanded=!e.ariaExpanded};
