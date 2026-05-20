@@ -1,1 +1,0 @@
-import"./input-DVDz5ygA.js";let t=document.querySelectorAll("button"),a={ikenna:"#ikenna",uche:"#uche",nonso:"#nonso",soma:"#soma"},l=new URLSearchParams(document.location.search),o=l.get("affID");function i(e){e.preventDefault();let n="#ikenna";o!=null&&a[o]!=null&&(n=a[o]),window.location=n}t.forEach(e=>{e.onclick=n=>{i(n)}});
