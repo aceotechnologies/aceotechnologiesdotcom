@@ -9,15 +9,15 @@
 <meta name="author" content="Code Kazeem">
 <meta name="description" content="When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.">
 
-<meta property="og:title" content="Programming a To-Do List App With Shell Script (Part 7)">
-<meta property="og:url" content="https://aceotechnologies.com/codekzm/markup-blogs.html">
-<meta property="og:image" content="/images/codekzm/To-Do-Shell-App.jpg">
+<meta property="og:title" content="Programming a To-Do List App With Shell Script (Part 2)">
+<meta property="og:url" content="https://aceotechnologies.com/blog/markup-blogs.html">
+<meta property="og:image" content="https://aceotechnologies.com/images/blog/images/blog/To-Do-Shell-App.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:type" content="article">
 <meta property="og:description" content="When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.">
 
-<title>Programming a To-Do List App With Shell Script (Part 7)</title>
+<title>Programming a To-Do List App With Shell Script (Part 2)</title>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -59,9 +59,11 @@ fbq('track', 'PageView');
         <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Features</a></li>
         <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Pricing</a></li>
       </ul> -->
-      <a href="/codekzm" aria-label="Company" title="Company" class="inline-flex items-center lg:mx-auto">
+      <a href="/blog" aria-label="Company" title="Aceotechnologies" class="inline-flex items-center lg:mx-auto">
         <!-- Logo -->
-        <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">CodeKZM Blog</span>
+        <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase"
+         title="AceoTechnologies Blog"
+         aria-label="Aceotechnologies Blog">Blog</span>
       </a>
       <!-- <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
         <li><a href="/" aria-label="Sign in" title="Sign in" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Sign in</a></li>
@@ -92,7 +94,7 @@ fbq('track', 'PageView');
 
     <div class="px-4 pb-6 lg:px-0">
         <h1 class="text-4xl font-semibold text-gray-800 leading-tight">
-        Programming a To-Do List App With Shell Script (Part 7)        </h1>
+        Programming a To-Do List App With Shell Script (Part 2)        </h1>
         <!-- <a 
         href="#"
         class="py-2 blog-primary-color inline-flex items-center justify-center mb-2"
@@ -101,10 +103,10 @@ fbq('track', 'PageView');
         </a> -->
     </div>
 
-    <img src="/images/codekzm/To-Do-Shell-App.jpg" class="w-full object-cover lg:rounded" style="height: 28em;"/>
+    <img src="/images/blog/To-Do-Shell-App.jpg" class="w-full object-cover lg:rounded" style="height: 28em;"/>
 
     <div class="text-gray-400 italic mt-4">
-        2 minute read.    </div>
+        3 minute read.    </div>
 </div>
 
 </header>
@@ -115,109 +117,156 @@ fbq('track', 'PageView');
           
             <p>This is a 7 part tutorial. Follow the links below to jump to preferred part.</p>
 <ol>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script.html">Programming a To-Do List App With Shell Script (Part 1)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-2.html">Programming a To-Do List App With Shell Script (Part 2)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-3.html">Programming a To-Do List App With Shell Script (Part 3)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-4.html">Programming a To-Do List App With Shell Script (Part 4)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-5.html">Programming a To-Do List App With Shell Script (Part 5)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-6.html">Programming a To-Do List App With Shell Script (Part 6)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-7.html">Programming a To-Do List App With Shell Script (Part 7)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script.html">Programming a To-Do List App With Shell Script (Part 1)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-2.html">Programming a To-Do List App With Shell Script (Part 2)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-3.html">Programming a To-Do List App With Shell Script (Part 3)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-4.html">Programming a To-Do List App With Shell Script (Part 4)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-5.html">Programming a To-Do List App With Shell Script (Part 5)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-6.html">Programming a To-Do List App With Shell Script (Part 6)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-7.html">Programming a To-Do List App With Shell Script (Part 7)</a></li>
 </ol>
-<h2>The <code>reset()</code> Function</h2>
-<p>The <code>reset()</code> function completely clears the to-do application data and restores it to its initial state. It is essentially a “factory reset” for your task list.</p>
-<p>Here’s a detailed breakdown:</p>
-<pre><code class="language-sh">reset() {
-    echo -e "\nWarning."
-    read -p "Are you sure you want to Reset To-do? All saved items will be deleted, and this action is not reversible (Y / N): " CONFIRM
+<h2>The <code>add()</code> Function</h2>
+<p>This function is responsible for adding new tasks to the to-do list. It repeatedly prompts the user for tasks, assigns each one a unique ID, records the creation date, and saves everything to the data file.</p>
+<pre><code class="language-sh">add() {
+    echo -e ""
+    TODO=""
+    while [[ ${TODO,,} != "q" ]]
+    do
+        read -p "Write your to-do or enter q to move to main menu: " TODO
 
-    if [[ ${CONFIRM,,} == 'y' ]]; then
-        echo -e "id,title,created_at,updated_at,completed_at" &gt; "$LIST"
-        echo 0 &gt; $INDEXFILE
-        echo -e "\nTo-do list reset successfully."
-        list
-    else
-        echo -e "\nReset action cancelled"
-    fi
+        if [ ${#TODO} -gt 1 ]; then
+            TODO=$(echo ${TODO} | sed 's|,|`|g')
+            INDEX=$(cat "${INDEXFILE}")
+            (( INDEX += 1 ))
+            CREATEDAT=$(date | sed 's|,|`|g')
+            STRING="$INDEX,$TODO,$CREATEDAT,,"
+
+            echo -e "$STRING" &gt;&gt; "$LIST"
+
+            echo "$INDEX" &gt; "$INDEXFILE"
+
+            echo -e "\nTo do added successfully!"
+        fi
+    done
 }</code></pre>
-<h2>1. Warning Message</h2>
-<pre><code class="language-sh">echo -e "\nWarning."</code></pre>
-<p>Prints a warning to alert the user that they are about to perform a destructive action.</p>
-<h2>2. Confirmation Prompt</h2>
-<pre><code class="language-sh">read -p "Are you sure you want to Reset To-do? All saved items will be deleted, and this action is not reversible (Y / N): " CONFIRM</code></pre>
-<p>Asks the user to confirm the reset.</p>
+<h4>Function Definition</h4>
+<pre><code class="language-sh">add() {</code></pre>
+<p>Defines a function called <code>add</code>. Calling <code>add</code> starts the task creation process.</p>
+<h4>Print a Blank Line</h4>
+<pre><code class="language-sh">echo -e ""</code></pre>
+<p>Adds an empty line to make the terminal output cleaner.</p>
+<h4>Initialize the TODO Variable</h4>
+<pre><code class="language-sh">TODO=""</code></pre>
+<p>Creates an empty variable that will store the user's input.</p>
+<h4>Start the Input Loop</h4>
+<pre><code class="language-sh">while [[ ${TODO,,} != "q" ]]</code></pre>
+<p>The loop continues until the user enters <code>q</code>. The <code>${TODO,,}</code> syntax converts the value of <code>TODO</code> to lowercase before comparison.</p>
+<p>Examples:</p>
+<pre><code class="language-sh">Q  -&gt; q
+q  -&gt; q
+QuIt -&gt; quit</code></pre>
+<p>This means both <code>q</code> and <code>Q</code> will exit the loop.</p>
+<h4>Prompt the User</h4>
+<pre><code class="language-sh">read -p "Write your to-do or enter q to move to main menu: " TODO</code></pre>
+<p>Displays:</p>
+<pre><code class="language-text">Write your to-do or enter q to move to main menu:</code></pre>
+<p>and stores the user's response in the <code>TODO</code> variable.</p>
+<h4>Ignore Empty Entries</h4>
+<pre><code class="language-sh">if [ ${#TODO} -gt 1 ]; then</code></pre>
+<p><code>${#TODO}</code> returns the length of the entered text.</p>
+<p>Examples:</p>
+<pre><code class="language-sh">""          -&gt; 0
+"a"         -&gt; 1
+"Buy milk"  -&gt; 8</code></pre>
+<p>Only entries longer than one character are processed. This prevents accidental blank entries.</p>
+<h4>Escape Commas in Task Text</h4>
+<pre><code class="language-sh">TODO=$(echo ${TODO} | sed 's|,|`|g')</code></pre>
+<p>Since the application stores data as comma-separated values, a comma inside a task description would break the file format.</p>
 <p>Example:</p>
-<pre><code class="language-text">Are you sure you want to Reset To-do? All saved items will be deleted...</code></pre>
-<h2>3. Case-Insensitive Check</h2>
-<pre><code class="language-sh">if [[ ${CONFIRM,,} == 'y' ]]; then</code></pre>
-<p>Converts input to lowercase so both <code>Y</code> and <code>y</code> are accepted.</p>
-<h2>4. Reset the To-do File</h2>
-<pre><code class="language-sh">echo -e "id,title,created_at,updated_at,completed_at" &gt; "$LIST"</code></pre>
-<p>This overwrites the entire to-do file with only the header row.</p>
-<h3>Effect:</h3>
-<p>Before:</p>
-<pre><code class="language-text">
-id="b1q7wd"
-1,Buy milk,...
-2,Finish blog,...
-3,Learn shell,...</code></pre>
-<p>After:</p>
-<pre><code class="language-text">id,title,created_at,updated_at,completed_at</code></pre>
-<p>Everything else is deleted.</p>
-<h2>5. Reset the Index Counter</h2>
-<pre><code class="language-sh">echo -e 0 &gt; "$INDEXFILE"</code></pre>
-<p>Resets the task counter back to zero so new tasks start from ID 1 again.</p>
+<pre><code class="language-text">Buy milk, bread and eggs</code></pre>
+<p>would be interpreted as multiple columns. To avoid that, commas are temporarily replaced with backticks:</p>
+<pre><code class="language-text">Buy milk` bread and eggs</code></pre>
+<p>The <code>list()</code> function later converts them back.</p>
+<h4>Get the Current Task ID</h4>
+<pre><code class="language-sh">INDEX=$(cat "${INDEXFILE}")</code></pre>
+<p>Reads the current task number from a file.</p>
+<p>Suppose <code>INDEXFILE</code> contains:</p>
+<pre><code class="language-text">12</code></pre>
+<p>Then:</p>
+<pre><code class="language-sh">INDEX=12</code></pre>
+<h4>Increment the ID</h4>
+<pre><code class="language-sh">(( INDEX += 1 ))</code></pre>
+<p>Increases the task ID by one.</p>
+<pre><code class="language-sh">12 -&gt; 13</code></pre>
+<p>Each task gets a unique identifier.</p>
+<h4>Generate a Timestamp</h4>
+<pre><code class="language-sh">CREATEDAT=$(date | sed 's|,|`|g')</code></pre>
+<p>Stores the current date and time.</p>
 <p>Example:</p>
-<p>Before:</p>
-<pre><code class="language-text">15</code></pre>
-<p>After reset:</p>
-<pre><code class="language-text">0</code></pre>
-<h2>6. Success Message</h2>
-<pre><code class="language-sh">echo -e "\nTo-do list reset successfully."</code></pre>
-<p>Confirms the reset worked.</p>
-<h2>7. Show Empty List</h2>
-<pre><code class="language-sh">list</code></pre>
-<p>Displays the empty table with only headers.</p>
-<p>Example output:</p>
-<pre><code class="language-text">id  title  created_at  updated_at  completed_at
------------------------------------------------</code></pre>
-<h2>8. If User Cancels</h2>
-<pre><code class="language-sh">else
-    echo -e "\nReset action cancelled"</code></pre>
-<p>If the user does not confirm with <code>y</code>, nothing is deleted.</p>
-<h2>Example Flow</h2>
-<h3>Before reset:</h3>
-<pre><code class="language-text">1,Buy milk,...
-2,Finish blog,...
-3,Learn shell,...</code></pre>
-<p>User runs:</p>
-<pre><code class="language-text">reset</code></pre>
-<p>System:</p>
-<pre><code class="language-text">Warning.
-Are you sure you want to Reset To-do? ...</code></pre>
-<p>User input:</p>
-<pre><code class="language-text">y</code></pre>
-<h3>After reset:</h3>
+<pre><code class="language-text">Mon Jun 15 16:45:10 WAT 2026</code></pre>
+<p>The comma replacement is performed again as a safety measure.</p>
+<h4>Build the Record</h4>
+<pre><code class="language-sh">STRING="$INDEX,$TODO,$CREATEDAT,,"</code></pre>
+<p>Creates a CSV record with five fields:</p>
 <pre><code class="language-text">id,title,created_at,updated_at,completed_at</code></pre>
-<p>And index becomes:</p>
-<pre><code class="language-text">0</code></pre>
-<h2><code>reset()</code> Summary</h2>
-<p>The <code>reset()</code> function:</p>
+<p>Example:</p>
+<pre><code class="language-text">13,Buy milk,Mon Jun 15 16:45:10 WAT 2026,,</code></pre>
+<p>Notice that:</p>
 <ul>
-<li>Warns the user about destructive action</li>
-<li>Requests confirmation</li>
-<li>Clears all tasks by rewriting the list file</li>
-<li>Resets the ID counter to zero</li>
-<li>Displays an empty list</li>
-<li>Cancels safely if user declines</li>
+<li><code>updated_at</code> is empty</li>
+<li><code>completed_at</code> is empty</li>
 </ul>
-<p>It is the most destructive function in the app because it wipes all stored to-do data permanently.</p>
+<p>because the task has just been created.</p>
+<h4>Save the Task</h4>
+<pre><code class="language-sh">echo -e "$STRING" &gt;&gt; "$LIST"</code></pre>
+<p>Appends the new record to the task database file.</p>
+<p>If <code>$LIST</code> already contains:</p>
+<pre><code class="language-text">12,Finish article,...</code></pre>
+<p>the new task is added below it.</p>
+<h2>Save the New Index</h2>
+<pre><code class="language-sh">echo "$INDEX" &gt; "$INDEXFILE"</code></pre>
+<p>Updates the index file with the latest ID so the next task gets a higher number.</p>
+<p>Example:</p>
+<pre><code class="language-text">13</code></pre>
+<h2>Show Success Message</h2>
+<pre><code class="language-sh">echo -e "\nTo do added successfully!"</code></pre>
+<p>Displays:</p>
+<pre><code class="language-text">To do added successfully!</code></pre>
+<p>to confirm the task was saved.</p>
+<h2>Example Walkthrough</h2>
+<p>Suppose:</p>
+<pre><code class="language-text">INDEXFILE = 3</code></pre>
+<p>The user enters:</p>
+<pre><code class="language-text">Learn shell scripting</code></pre>
+<p>The function generates:</p>
+<pre><code class="language-text">4,Learn shell scripting,Mon Jun 15 16:45:10 WAT 2026,,</code></pre>
+<p>and appends it to the list file.</p>
+<p>The index file is updated to:</p>
+<pre><code class="language-text">4</code></pre>
+<p>and the user sees:</p>
+<pre><code class="language-text">To do added successfully!</code></pre>
+<p>The loop then prompts for another task until the user enters <code>q</code>.</p>
+<h4>add() Function Summary</h4>
+<p>The <code>add()</code> function:</p>
+<ol>
+<li>Continuously prompts for new tasks.</li>
+<li>Exits when the user enters <code>q</code>.</li>
+<li>Prevents empty entries.</li>
+<li>Escapes commas to preserve CSV formatting.</li>
+<li>Generates a unique task ID.</li>
+<li>Records the creation timestamp.</li>
+<li>Saves the task to the to-do list file.</li>
+<li>Updates the ID counter.</li>
+<li>Confirms successful creation to the user.</li>
+</ol>
+<p>In the third part of this series, we tackle the <code>list()</code> function. So head over to <a href="/blog/programming-to-do-list-app-bash-shell-script-part-3.html">Programming a To-Do List App With Shell Script (Part 3)</a></p>
         </article>
 
         <div class="w-full lg:w-1/4 m-auto mt-12 max-w-screen-sm">
 
           <div class="p-4 border-t border-b md:border md:rounded">
     <div class="flex py-2">
-      <img src="/images/codekzm/profile.jpg"
+      <img src="/images/blog/profile.jpg"
         class="h-10 w-10 rounded-full mr-2 object-cover" />
       <div>
         <p class="font-semibold text-gray-700 text-sm"> Code Kazeem </p>
@@ -318,15 +367,15 @@ Are you sure you want to Reset To-do? ...</code></pre>
       <div class="p-8 bg-white border rounded shadow-sm">
       <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
       </p>
-      <a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-5.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 5)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 5)</a>
+      <a href="/blog/programming-to-do-list-app-bash-shell-script-part-6.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 6)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 6)</a>
       <p class="mb-5 text-gray-700">
         When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.      </p>
       <div class="flex items-center">
-        <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="mr-3">
-          <img src="/images/codekzm/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
+        <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="mr-3">
+          <img src="/images/blog/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
         </a>
         <div>
-          <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
+          <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
           <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
         </div>
       </div>
@@ -335,15 +384,15 @@ Are you sure you want to Reset To-do? ...</code></pre>
       <div class="p-8 bg-white border rounded shadow-sm">
       <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
       </p>
-      <a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-6.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 6)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 6)</a>
+      <a href="/blog/programming-to-do-list-app-bash-shell-script-part-7.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 7)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 7)</a>
       <p class="mb-5 text-gray-700">
         When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.      </p>
       <div class="flex items-center">
-        <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="mr-3">
-          <img src="/images/codekzm/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
+        <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="mr-3">
+          <img src="/images/blog/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
         </a>
         <div>
-          <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
+          <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
           <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
         </div>
       </div>
@@ -352,15 +401,15 @@ Are you sure you want to Reset To-do? ...</code></pre>
       <div class="p-8 bg-white border rounded shadow-sm">
       <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
       </p>
-      <a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-5.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 5)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 5)</a>
+      <a href="/blog/programming-to-do-list-app-bash-shell-script-part-5.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 5)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 5)</a>
       <p class="mb-5 text-gray-700">
         When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.      </p>
       <div class="flex items-center">
-        <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="mr-3">
-          <img src="/images/codekzm/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
+        <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="mr-3">
+          <img src="/images/blog/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
         </a>
         <div>
-          <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
+          <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
           <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
         </div>
       </div>

@@ -9,15 +9,15 @@
 <meta name="author" content="Code Kazeem">
 <meta name="description" content="When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.">
 
-<meta property="og:title" content="Programming a To-Do List App With Shell Script (Part 3)">
-<meta property="og:url" content="https://aceotechnologies.com/codekzm/markup-blogs.html">
-<meta property="og:image" content="/images/codekzm/To-Do-Shell-App.jpg">
+<meta property="og:title" content="Programming a To-Do List App With Shell Script (Part 6)">
+<meta property="og:url" content="https://aceotechnologies.com/blog/markup-blogs.html">
+<meta property="og:image" content="https://aceotechnologies.com/images/blog/images/blog/To-Do-Shell-App.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:type" content="article">
 <meta property="og:description" content="When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.">
 
-<title>Programming a To-Do List App With Shell Script (Part 3)</title>
+<title>Programming a To-Do List App With Shell Script (Part 6)</title>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -59,9 +59,11 @@ fbq('track', 'PageView');
         <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Features</a></li>
         <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Pricing</a></li>
       </ul> -->
-      <a href="/codekzm" aria-label="Company" title="Company" class="inline-flex items-center lg:mx-auto">
+      <a href="/blog" aria-label="Company" title="Aceotechnologies" class="inline-flex items-center lg:mx-auto">
         <!-- Logo -->
-        <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">CodeKZM Blog</span>
+        <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase"
+         title="AceoTechnologies Blog"
+         aria-label="Aceotechnologies Blog">Blog</span>
       </a>
       <!-- <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
         <li><a href="/" aria-label="Sign in" title="Sign in" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Sign in</a></li>
@@ -92,7 +94,7 @@ fbq('track', 'PageView');
 
     <div class="px-4 pb-6 lg:px-0">
         <h1 class="text-4xl font-semibold text-gray-800 leading-tight">
-        Programming a To-Do List App With Shell Script (Part 3)        </h1>
+        Programming a To-Do List App With Shell Script (Part 6)        </h1>
         <!-- <a 
         href="#"
         class="py-2 blog-primary-color inline-flex items-center justify-center mb-2"
@@ -101,10 +103,10 @@ fbq('track', 'PageView');
         </a> -->
     </div>
 
-    <img src="/images/codekzm/To-Do-Shell-App.jpg" class="w-full object-cover lg:rounded" style="height: 28em;"/>
+    <img src="/images/blog/To-Do-Shell-App.jpg" class="w-full object-cover lg:rounded" style="height: 28em;"/>
 
     <div class="text-gray-400 italic mt-4">
-        2 minute read.    </div>
+        3 minute read.    </div>
 </div>
 
 </header>
@@ -115,124 +117,149 @@ fbq('track', 'PageView');
           
             <p>This is a 7 part tutorial. Follow the links below to jump to preferred part.</p>
 <ol>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script.html">Programming a To-Do List App With Shell Script (Part 1)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-2.html">Programming a To-Do List App With Shell Script (Part 2)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-3.html">Programming a To-Do List App With Shell Script (Part 3)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-4.html">Programming a To-Do List App With Shell Script (Part 4)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-5.html">Programming a To-Do List App With Shell Script (Part 5)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-6.html">Programming a To-Do List App With Shell Script (Part 6)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-7.html">Programming a To-Do List App With Shell Script (Part 7)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script.html">Programming a To-Do List App With Shell Script (Part 1)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-2.html">Programming a To-Do List App With Shell Script (Part 2)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-3.html">Programming a To-Do List App With Shell Script (Part 3)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-4.html">Programming a To-Do List App With Shell Script (Part 4)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-5.html">Programming a To-Do List App With Shell Script (Part 5)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-6.html">Programming a To-Do List App With Shell Script (Part 6)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-7.html">Programming a To-Do List App With Shell Script (Part 7)</a></li>
 </ol>
-<h2>The <code>list()</code> Function</h2>
-<p>The code defines a shell function named <code>list()</code> that formats and displays the contents of a file stored in the variable <code>$LIST</code>.</p>
-<pre><code class="language-sh">list() {
+<h2>The <code>delete()</code> Function</h2>
+<p>The <code>delete()</code> function is responsible for removing a to-do item from the list based on its ID. It displays all tasks, prompts the user for an ID, asks </p>
+<p>for confirmation, and then deletes the matching record from the file.</p>
+<p>Here’s a clear breakdown of how it works:</p>
+<pre><code class="language-sh">delete() {
     echo -e ""
-    column -t -d -s, -N id,title,created_at,updated_at,completed_at -c80 -W 1,2,3,4,5 "$LIST" | sed 's|`|,|g' | sed '1 p;1 s/./-/g'
-}</code></pre>
-<h3>Line 1:</h3>
-<p>Function Definition</p>
-<pre><code class="language-sh">list() {</code></pre>
-<p>This creates a function called <code>list</code>. You can execute it later by simply running:</p>
-<pre><code class="language-sh">list</code></pre>
-<h3>Line 2: Print a Blank Line</h3>
-<pre><code class="language-sh">echo -e ""</code></pre>
-<p>Outputs an empty line before displaying the task list. This improves readability by adding some spacing.</p>
-<h3>Line 3:</h3>
-<p>Format and Display the Data</p>
-<pre><code class="language-sh">column -t -d -s, -N id,title,created_at,updated_at,completed_at -c80 -W 1,2,3,4,5 "$LIST"</code></pre>
-<p>This command uses the </p>
-<p><code>column</code> utility to convert comma-separated data into a nicely aligned table.</p>
-<h4>Options explained:</h4>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>-t</code></td>
-<td>Create a table with aligned columns</td>
-</tr>
-<tr>
-<td><code>-d</code></td>
-<td>Do not merge multiple delimiters</td>
-</tr>
-<tr>
-<td><code>-s,</code></td>
-<td>Use a comma as the field separator</td>
-</tr>
-<tr>
-<td><code>-N</code></td>
-<td>Specify column names</td>
-</tr>
-<tr>
-<td><code>-c80</code></td>
-<td>Set output width to 80 characters</td>
-</tr>
-<tr>
-<td><code>-W 1,2,3,4,5</code></td>
-<td>Allow wrapping in columns 1–5</td>
-</tr>
-</tbody>
-</table>
-<p>If <code>$LIST</code> contains:</p>
-<pre><code class="language-text">1,Buy groceries,2026-06-15,2026-06-15,
-2,Finish blog post,2026-06-15,2026-06-15,</code></pre>
-<p>the output becomes something like:</p>
-<pre><code class="language-text">id  title             created_at  updated_at  completed_at
-1   Buy groceries     2026-06-15  2026-06-15
-2   Finish blog post  2026-06-15  2026-06-15</code></pre>
-<h3>First <code>sed</code> Command</h3>
-<pre><code class="language-sh">sed 's|`|,|g'</code></pre>
-<p>This replaces every backtick character (<code>`</code>) with a comma.</p>
-<h4>Example:</h4>
-<p>Before:</p>
-<pre><code class="language-text">1,Buy milk`bread,2026-06-15,...</code></pre>
-<p>After:</p>
-<pre><code class="language-text">1,Buy 
+    ID=""
 
-milk,bread,2026-06-15,...</code></pre>
-<p>This is often done when commas inside task titles are temporarily stored as backticks to avoid breaking CSV formatting.</p>
-<h3>Second <code>sed</code> Command</h3>
-<pre><code class="language-sh">sed '1 p;1 s/./-/g'</code></pre>
-<p>This operates only on the first line (the header). It adds a line of dashes to denote the headers.</p>
-<h4><code>1 p</code></h4>
-<p>Print the first line again.</p>
-<h4><code>1 s/./-/g</code></h4>
-<p>Replace every character in the first line with a dash (<code>-</code>).</p>
-<p>Suppose the header is:</p>
-<pre><code class="language-text">id  title  created_at  updated_at  completed_at</code></pre>
-<p>The </p>
-<p>command produces:</p>
-<pre><code class="language-text">id  title  created_at  updated_at  completed_at
-------------------------------------------------</code></pre>
-<p>This creates a separator line under the header, making the table easier to read.</p>
-<h3>Final Output Example</h3>
+    while [[ ${ID,,} != "q" ]]
+    do
+        list
+        echo -e ""
+        read -p "Enter the ID of to-do to delete, or q to move to main menu: " ID
+
+        if [ "$ID" -eq "$ID" ] 2&gt;/dev/null; then
+            grep "^$ID" "$LIST" | cut -d',' -f2 | sed 's|`|,|g'
+            read -p "Are you sure you want to proceed? (Y / N) : " CONFIRM
+
+            if [[ ${CONFIRM,,} != "y" ]]; then
+                echo -e "Delete cancelled."
+                break
+            fi
+
+            if sed -i "/^$ID/d" "$LIST"; then
+                echo -e "\nTo-do deleted successfully"
+            else
+                echo -e "\nDelete unsuccessful. Make sure the to-do index exists."
+            fi
+        fi
+    done
+}</code></pre>
+<h2>1. Function Setup</h2>
+<pre><code class="language-sh">delete() {
+    echo -e ""
+    ID=""</code></pre>
+<ul>
+<li>Starts the function</li>
+<li>Prints a blank line for spacing</li>
+<li>Initializes <code>ID</code> variable</li>
+</ul>
+<h2>2. Loop Until Exit</h2>
+<pre><code class="language-sh">while [[ ${ID,,} != "q" ]]</code></pre>
+<p>Keeps running until the user enters <code>q</code> (case-insensitive).</p>
+<h2>3. Show All Tasks</h2>
+<pre><code class="language-sh">list</code></pre>
+<p>Displays the current to-do items so the user can choose which one to delete.</p>
+<h2>4. Prompt for ID</h2>
+<pre><code class="language-sh">read -p "Enter the ID of to-do to delete, or q to move to main menu: " ID</code></pre>
+<p>User enters the ID of the task they want to remove.</p>
+<h2>5. Validate Numeric Input</h2>
+<pre><code class="language-sh">if [ "$ID" -eq "$ID" ] 2&gt;/dev/null; then</code></pre>
+<p>Checks if the input is a valid number.</p>
+<ul>
+<li>Valid: <code>3</code>, <code>10</code></li>
+<li>Invalid: <code>abc</code>, <code>q</code></li>
+</ul>
+<h2>6. Show Task Being Deleted</h2>
+<pre><code class="language-sh">grep "^$ID" "$LIST" | cut -d',' -f2 | sed 's|`|,|g'</code></pre>
+<p>This line:</p>
+<h3>Finds the task</h3>
+<pre><code class="language-sh">grep "^$ID" "$LIST"</code></pre>
+<h3>Extracts title</h3>
+<pre><code class="language-sh">cut -d',' -f2</code></pre>
+<h3>Restores commas</h3>
+<pre><code class="language-sh">sed 's|`|,|g'</code></pre>
+<p>Example output:</p>
+<pre><code class="language-text">Buy groceries</code></pre>
+<p>This lets the user see what they are about to delete.</p>
+<h2>7. Confirm Deletion</h2>
+<pre><code class="language-sh">read -p "Are you sure you want to proceed? (Y / N) : " CONFIRM</code></pre>
+<p>Prevents accidental deletion.</p>
+<h2>8. Cancel if Not Confirmed</h2>
+<pre><code class="language-sh">if [[ ${CONFIRM,,} != "y" ]]; then</code></pre>
+<p>If user does not enter <code>y</code>, deletion is cancelled:</p>
+<pre><code class="language-sh">echo -e "Delete cancelled."
+break</code></pre>
+<h2>9. Delete the Task</h2>
+<pre><code class="language-sh">if sed -i "/^$ID/d" "$LIST"; then</code></pre>
+<p>This is the core operation:</p>
+<ul>
+<li>Finds lines starting with the given ID</li>
+<li>Deletes them from the file</li>
+</ul>
+<p>Example:</p>
+<p>Before:</p>
+<pre><code class="language-text">1,Buy milk,...
+2,Finish blog,...</code></pre>
+<p>Command:</p>
+<pre><code class="language-text">sed -i "/^2/d" "$LIST"</code></pre>
+<p>After:</p>
+<pre><code class="language-text">1,Buy milk,...</code></pre>
+<h2>10. Success Message</h2>
+<pre><code class="language-sh">echo -e "\nTo-do deleted successfully"</code></pre>
+<p>Confirms the task has been removed.</p>
+<h2>11. Error Handling</h2>
+<pre><code class="language-sh">echo -e "\nDelete unsuccessful. Make sure the to-do index exists."</code></pre>
+<p>Shown if no matching ID is found.</p>
+<h2>Example Walkthrough</h2>
+<h3>Before:</h3>
+<pre><code class="language-text">1,Buy groceries,...
+2,Finish blog post,...
+3,Learn 
+
+shell scripting,...</code></pre>
+<p>User input:</p>
+<pre><code class="language-text">2</code></pre>
+<p>System shows:</p>
+<pre><code class="language-text">Finish blog post</code></pre>
+<p>User confirms:</p>
+<pre><code class="language-text">y</code></pre>
+<h3>After:</h3>
 <pre><code class="language-text">
-id  title             created_at  updated_at  completed_at
-----------------------------------------------------------
-1   Buy groceries     2026-06-15  2026-06-15
-2   Finish blog post  2026-06-15  2026-06-15</code></pre>
-<h3><code>list()</code> Summary</h3>
-<p>The <code>list()</code> function:</p>
-<ol>
-<li>Prints a blank line.</li>
-<li>Reads task data from the file in <code>$LIST</code>.</li>
-<li>Formats comma-separated records into a table using <code>column</code>.</li>
-<li>Restores any commas that were temporarily stored as backticks.</li>
-<li>Prints a dashed separator beneath the column headers.</li>
-<li>Displays a clean, human-readable task list in the terminal.</li>
-</ol>
-<p>In the fourth part of this series, we tackle the <code>edit()</code> function. So head over to <a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-4.html">Programming a To-Do List App With Shell Script (Part 4)</a></p>
+id="ex5"
+1,Buy groceries,...
+3,Learn shell scripting,...</code></pre>
+<h2>Summary</h2>
+<p>The <code>delete()</code> function:</p>
+<ul>
+<li>Shows all tasks</li>
+<li>Prompts user for task ID</li>
+<li>Validates numeric input</li>
+<li>Displays task before deletion</li>
+<li>Asks for confirmation</li>
+<li>Removes matching line from file using <code>sed</code></li>
+<li>Confirms success or failure</li>
+</ul>
+<p>It is a simple but powerful way to permanently remove tasks from the to-do list file.</p>
+<p>In the seventh and final part of this series, we tackle the <code>reset()</code> function. So head over to <a href="/blog/programming-to-do-list-app-bash-shell-script-part-7.html">Programming a To-Do List App With Shell Script (Part 7)</a></p>
         </article>
 
         <div class="w-full lg:w-1/4 m-auto mt-12 max-w-screen-sm">
 
           <div class="p-4 border-t border-b md:border md:rounded">
     <div class="flex py-2">
-      <img src="/images/codekzm/profile.jpg"
+      <img src="/images/blog/profile.jpg"
         class="h-10 w-10 rounded-full mr-2 object-cover" />
       <div>
         <p class="font-semibold text-gray-700 text-sm"> Code Kazeem </p>
@@ -333,15 +360,15 @@ id  title             created_at  updated_at  completed_at
       <div class="p-8 bg-white border rounded shadow-sm">
       <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
       </p>
-      <a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-3.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 3)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 3)</a>
+      <a href="/blog/programming-to-do-list-app-bash-shell-script-part-4.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 4)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 4)</a>
       <p class="mb-5 text-gray-700">
         When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.      </p>
       <div class="flex items-center">
-        <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="mr-3">
-          <img src="/images/codekzm/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
+        <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="mr-3">
+          <img src="/images/blog/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
         </a>
         <div>
-          <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
+          <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
           <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
         </div>
       </div>
@@ -350,15 +377,15 @@ id  title             created_at  updated_at  completed_at
       <div class="p-8 bg-white border rounded shadow-sm">
       <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
       </p>
-      <a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-2.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 2)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 2)</a>
+      <a href="/blog/programming-to-do-list-app-bash-shell-script-part-5.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 5)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 5)</a>
       <p class="mb-5 text-gray-700">
         When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.      </p>
       <div class="flex items-center">
-        <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="mr-3">
-          <img src="/images/codekzm/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
+        <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="mr-3">
+          <img src="/images/blog/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
         </a>
         <div>
-          <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
+          <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
           <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
         </div>
       </div>
@@ -367,15 +394,15 @@ id  title             created_at  updated_at  completed_at
       <div class="p-8 bg-white border rounded shadow-sm">
       <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
       </p>
-      <a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-3.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 3)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 3)</a>
+      <a href="/blog/programming-to-do-list-app-bash-shell-script-part-2.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 2)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 2)</a>
       <p class="mb-5 text-gray-700">
         When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.      </p>
       <div class="flex items-center">
-        <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="mr-3">
-          <img src="/images/codekzm/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
+        <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="mr-3">
+          <img src="/images/blog/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
         </a>
         <div>
-          <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
+          <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
           <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
         </div>
       </div>

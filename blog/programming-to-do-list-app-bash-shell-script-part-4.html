@@ -9,15 +9,15 @@
 <meta name="author" content="Code Kazeem">
 <meta name="description" content="When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.">
 
-<meta property="og:title" content="Programming a To-Do List App With Shell Script (Part 6)">
-<meta property="og:url" content="https://aceotechnologies.com/codekzm/markup-blogs.html">
-<meta property="og:image" content="/images/codekzm/To-Do-Shell-App.jpg">
+<meta property="og:title" content="Programming a To-Do List App With Shell Script (Part 4)">
+<meta property="og:url" content="https://aceotechnologies.com/blog/markup-blogs.html">
+<meta property="og:image" content="https://aceotechnologies.com/images/blog/images/blog/To-Do-Shell-App.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:type" content="article">
 <meta property="og:description" content="When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.">
 
-<title>Programming a To-Do List App With Shell Script (Part 6)</title>
+<title>Programming a To-Do List App With Shell Script (Part 4)</title>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -59,9 +59,11 @@ fbq('track', 'PageView');
         <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Features</a></li>
         <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Pricing</a></li>
       </ul> -->
-      <a href="/codekzm" aria-label="Company" title="Company" class="inline-flex items-center lg:mx-auto">
+      <a href="/blog" aria-label="Company" title="Aceotechnologies" class="inline-flex items-center lg:mx-auto">
         <!-- Logo -->
-        <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">CodeKZM Blog</span>
+        <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase"
+         title="AceoTechnologies Blog"
+         aria-label="Aceotechnologies Blog">Blog</span>
       </a>
       <!-- <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
         <li><a href="/" aria-label="Sign in" title="Sign in" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Sign in</a></li>
@@ -92,7 +94,7 @@ fbq('track', 'PageView');
 
     <div class="px-4 pb-6 lg:px-0">
         <h1 class="text-4xl font-semibold text-gray-800 leading-tight">
-        Programming a To-Do List App With Shell Script (Part 6)        </h1>
+        Programming a To-Do List App With Shell Script (Part 4)        </h1>
         <!-- <a 
         href="#"
         class="py-2 blog-primary-color inline-flex items-center justify-center mb-2"
@@ -101,10 +103,10 @@ fbq('track', 'PageView');
         </a> -->
     </div>
 
-    <img src="/images/codekzm/To-Do-Shell-App.jpg" class="w-full object-cover lg:rounded" style="height: 28em;"/>
+    <img src="/images/blog/To-Do-Shell-App.jpg" class="w-full object-cover lg:rounded" style="height: 28em;"/>
 
     <div class="text-gray-400 italic mt-4">
-        3 minute read.    </div>
+        4 minute read.    </div>
 </div>
 
 </header>
@@ -115,149 +117,202 @@ fbq('track', 'PageView');
           
             <p>This is a 7 part tutorial. Follow the links below to jump to preferred part.</p>
 <ol>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script.html">Programming a To-Do List App With Shell Script (Part 1)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-2.html">Programming a To-Do List App With Shell Script (Part 2)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-3.html">Programming a To-Do List App With Shell Script (Part 3)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-4.html">Programming a To-Do List App With Shell Script (Part 4)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-5.html">Programming a To-Do List App With Shell Script (Part 5)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-6.html">Programming a To-Do List App With Shell Script (Part 6)</a></li>
-<li><a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-7.html">Programming a To-Do List App With Shell Script (Part 7)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script.html">Programming a To-Do List App With Shell Script (Part 1)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-2.html">Programming a To-Do List App With Shell Script (Part 2)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-3.html">Programming a To-Do List App With Shell Script (Part 3)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-4.html">Programming a To-Do List App With Shell Script (Part 4)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-5.html">Programming a To-Do List App With Shell Script (Part 5)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-6.html">Programming a To-Do List App With Shell Script (Part 6)</a></li>
+<li><a href="/blog/programming-to-do-list-app-bash-shell-script-part-7.html">Programming a To-Do List App With Shell Script (Part 7)</a></li>
 </ol>
-<h2>The <code>delete()</code> Function</h2>
-<p>The <code>delete()</code> function is responsible for removing a to-do item from the list based on its ID. It displays all tasks, prompts the user for an ID, asks </p>
-<p>for confirmation, and then deletes the matching record from the file.</p>
-<p>Here’s a clear breakdown of how it works:</p>
-<pre><code class="language-sh">delete() {
+<h2>The <code>edit()</code> Function</h2>
+<p>The <code>edit()</code> function allows a user to modify an existing to-do item. It displays the current list, prompts the user for a task ID, retrieves the existing task, asks for the updated text, and then updates the corresponding record in the data file.</p>
+<pre><code class="language-sh">edit() {
     echo -e ""
     ID=""
+    OLDTODO=""
+    NEWTODO=""
 
     while [[ ${ID,,} != "q" ]]
     do
         list
         echo -e ""
-        read -p "Enter the ID of to-do to delete, or q to move to main menu: " ID
+        read -p "Enter the ID of to-do to edit, or q to move to main menu: " ID
 
         if [ "$ID" -eq "$ID" ] 2&gt;/dev/null; then
-            grep "^$ID" "$LIST" | cut -d',' -f2 | sed 's|`|,|g'
-            read -p "Are you sure you want to proceed? (Y / N) : " CONFIRM
+            if OLDTODO=$(grep "^$ID" "$LIST" | cut -d',' -f2 | sed 's|`|,|g'); then
+                CREATEDAT=$(grep "^$ID" "$LIST" | cut -d',' -f3)
 
-            if [[ ${CONFIRM,,} != "y" ]]; then
-                echo -e "Delete cancelled."
-                break
-            fi
+                read -p "Edit To-do (${OLDTODO}): " NEWTODO
 
-            if sed -i "/^$ID/d" "$LIST"; then
-                echo -e "\nTo-do deleted successfully"
+                NEWTODO=$(echo "$NEWTODO" | sed 's|,|`|g')
+                UPDATEDAT=$(date | sed 's|,|`|g')
+
+                STRING="$ID,$NEWTODO,$CREATEDAT,$UPDATEDAT,"
+
+                sed -i "s/^$ID.*/$STRING/" "$LIST"
+
+                echo -e "\nTo-do edited successfully"
             else
-                echo -e "\nDelete unsuccessful. Make sure the to-do index exists."
+                echo -e "\nEdit unsuccessful. Make sure the to-do index exists."
             fi
         fi
     done
 }</code></pre>
-<h2>1. Function Setup</h2>
-<pre><code class="language-sh">delete() {
-    echo -e ""
-    ID=""</code></pre>
+<h2>Initialize Variables</h2>
+<pre><code class="language-sh">ID=""
+OLDTODO=""
+NEWTODO=""</code></pre>
+<p>These variables store:</p>
 <ul>
-<li>Starts the function</li>
-<li>Prints a blank line for spacing</li>
-<li>Initializes <code>ID</code> variable</li>
+<li><code>ID</code> → the task ID to edit</li>
+<li><code>OLDTODO</code> → the current task text</li>
+<li><code>NEWTODO</code> → the updated task text</li>
 </ul>
-<h2>2. Loop Until Exit</h2>
+<h2>Start the Loop</h2>
 <pre><code class="language-sh">while [[ ${ID,,} != "q" ]]</code></pre>
-<p>Keeps running until the user enters <code>q</code> (case-insensitive).</p>
-<h2>3. Show All Tasks</h2>
+<p>Keeps running until the user enters <code>q</code>.</p>
+<p>The <code>${ID,,}</code> syntax converts the input to lowercase before comparison, allowing both <code>q</code> and <code>Q</code> to exit.</p>
+<h2>Display</h2>
+<p>Current Tasks</p>
 <pre><code class="language-sh">list</code></pre>
-<p>Displays the current to-do items so the user can choose which one to delete.</p>
-<h2>4. Prompt for ID</h2>
-<pre><code class="language-sh">read -p "Enter the ID of to-do to delete, or q to move to main menu: " ID</code></pre>
-<p>User enters the ID of the task they want to remove.</p>
-<h2>5. Validate Numeric Input</h2>
+<p>Calls the previously defined <code>list()</code> function so the user can see all available tasks and their IDs.</p>
+<p>Example:</p>
+<pre><code class="language-text">id  title               created_at
+----------------------------------
+1   Buy groceries
+2   Finish blog post
+3   Learn shell</code></pre>
+<h2>Prompt for Task ID</h2>
+<pre><code class="language-sh">read -p "Enter the ID of to-do to edit, or q to move to main menu: " ID</code></pre>
+<p>The user enters the ID of the task they want to modify.</p>
+<p>Example:</p>
+<pre><code class="language-text">2</code></pre>
+<h2></h2>
+<p>Validate Numeric Input</p>
 <pre><code class="language-sh">if [ "$ID" -eq "$ID" ] 2&gt;/dev/null; then</code></pre>
-<p>Checks if the input is a valid number.</p>
-<ul>
-<li>Valid: <code>3</code>, <code>10</code></li>
-<li>Invalid: <code>abc</code>, <code>q</code></li>
-</ul>
-<h2>6. Show Task Being Deleted</h2>
-<pre><code class="language-sh">grep "^$ID" "$LIST" | cut -d',' -f2 | sed 's|`|,|g'</code></pre>
-<p>This line:</p>
-<h3>Finds the task</h3>
+<p>This is a common shell trick for checking whether a value is numeric.</p>
+<p>Examples:</p>
+<pre><code class="language-sh">2   -&gt; valid
+15  -&gt; valid
+abc -&gt; invalid
+q   -&gt; invalid</code></pre>
+<p>Errors are redirected to <code>/dev/null</code>:</p>
+<pre><code class="language-sh">2&gt;/dev/null</code></pre>
+<p>so invalid inputs don't produce ugly error messages.</p>
+<h2>Retrieve the Existing Task</h2>
+<pre><code class="language-sh">OLDTODO=$(grep "^$ID" "$LIST" | cut -d',' -f2 | sed 's|`|,|g')</code></pre>
+<p>This pipeline:</p>
+<h3>Find the matching record</h3>
 <pre><code class="language-sh">grep "^$ID" "$LIST"</code></pre>
-<h3>Extracts title</h3>
+<p>Finds lines beginning with the selected ID.</p>
+<p>Example:</p>
+<pre><code class="language-text">2,Finish blog post,Mon Jun 15...</code></pre>
+<h3>Extract the title</h3>
 <pre><code class="language-sh">cut -d',' -f2</code></pre>
-<h3>Restores commas</h3>
+<p>Returns:</p>
+<pre><code class="language-text">Finish blog post</code></pre>
+<h3>Restore commas</h3>
 <pre><code class="language-sh">sed 's|`|,|g'</code></pre>
-<p>Example output:</p>
-<pre><code class="language-text">Buy groceries</code></pre>
-<p>This lets the user see what they are about to delete.</p>
-<h2>7. Confirm Deletion</h2>
-<pre><code class="language-sh">read -p "Are you sure you want to proceed? (Y / N) : " CONFIRM</code></pre>
-<p>Prevents accidental deletion.</p>
-<h2>8. Cancel if Not Confirmed</h2>
-<pre><code class="language-sh">if [[ ${CONFIRM,,} != "y" ]]; then</code></pre>
-<p>If user does not enter <code>y</code>, deletion is cancelled:</p>
-<pre><code class="language-sh">echo -e "Delete cancelled."
-break</code></pre>
-<h2>9. Delete the Task</h2>
-<pre><code class="language-sh">if sed -i "/^$ID/d" "$LIST"; then</code></pre>
-<p>This is the core operation:</p>
+<p>Converts stored backticks back into commas.</p>
+<h2>Verify the Task Exists</h2>
+<pre><code class="language-sh">if OLDTODO=$(...)</code></pre>
+<p>If the lookup succeeds, editing continues.</p>
+<p>If no matching record exists, the code jumps to:</p>
+<pre><code class="language-sh">echo -e "\nEdit unsuccessful. Make sure the to-do index exists."</code></pre>
+<h2>Retrieve the Creation Date</h2>
+<pre><code class="language-sh">CREATEDAT=$(grep "^$ID" "$LIST" | cut -d',' -f3)</code></pre>
+<p>Extracts the original creation timestamp.</p>
+<p>Example:</p>
+<pre><code class="language-text">Mon Jun 15 14:20:00 WAT 2026</code></pre>
+<p>This value is preserved so editing doesn't change when the task was originally created.</p>
+<h2>Ask for the New Task Text</h2>
+<pre><code class="language-sh">read -p "Edit To-do (${OLDTODO}): " NEWTODO</code></pre>
+<p>Displays the current task as a reference.</p>
+<p>Example:</p>
+<pre><code class="language-text">Edit To-do (Finish blog post):</code></pre>
+<p>The user might enter:</p>
+<pre><code class="language-text">Finish shell tutorial blog post</code></pre>
+<h2>Escape Commas</h2>
+<pre><code class="language-sh">NEWTODO=$(echo "$NEWTODO" | sed 's|,|`|g')</code></pre>
+<p>Replaces commas with backticks to preserve the CSV format.</p>
+<h2>Record Update Time</h2>
+<pre><code class="language-sh">UPDATEDAT=$(date | sed 's|,|`|g')</code></pre>
+<p>Stores the current date and time.</p>
+<p>Example:</p>
+<pre><code class="language-text">Mon Jun 15 18:25:11 WAT 2026</code></pre>
+<p>This becomes the task's <code>updated_at</code> value.</p>
+<h2>Build the Updated Record</h2>
+<pre><code class="language-sh">STRING="$ID,$NEWTODO,$CREATEDAT,$UPDATEDAT,"</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">2,Finish shell tutorial blog post,Mon Jun 15 14:20:00 WAT 2026,Mon Jun 15 18:25:11 WAT 2026,</code></pre>
+<p>Notice:</p>
 <ul>
-<li>Finds lines starting with the given ID</li>
-<li>Deletes them from the file</li>
+<li>Original ID remains unchanged.</li>
+<li>Original creation date is preserved.</li>
+<li>Update date is refreshed.</li>
+<li>Completion date remains empty.</li>
 </ul>
+<h2>Replace the Existing Record</h2>
+<pre><code class="language-sh">sed -i "s/^$ID.*/$STRING/" "$LIST"</code></pre>
+<h3>What it does</h3>
+<p>Finds the line beginning with the selected ID and replaces the entire line.</p>
 <p>Example:</p>
 <p>Before:</p>
-<pre><code class="language-text">1,Buy milk,...
-2,Finish blog,...</code></pre>
-<p>Command:</p>
-<pre><code class="language-text">sed -i "/^2/d" "$LIST"</code></pre>
+<pre><code class="language-text">2,Finish blog post,Mon Jun 15 14:20:00 WAT 2026,,</code></pre>
 <p>After:</p>
-<pre><code class="language-text">1,Buy milk,...</code></pre>
-<h2>10. Success Message</h2>
-<pre><code class="language-sh">echo -e "\nTo-do deleted successfully"</code></pre>
-<p>Confirms the task has been removed.</p>
-<h2>11. Error Handling</h2>
-<pre><code class="language-sh">echo -e "\nDelete unsuccessful. Make sure the to-do index exists."</code></pre>
-<p>Shown if no matching ID is found.</p>
+<pre><code class="language-text">2,Finish shell tutorial blog post,Mon Jun 15 14:20:00 WAT 2026,Mon Jun 15 18:25:11 WAT 2026,</code></pre>
+<p>The <code>-i</code> option edits the file in place.</p>
+<h2>Success Message</h2>
+<pre><code class="language-sh">echo -e "\nTo-do edited successfully"</code></pre>
+<p>Displays:</p>
+<pre><code class="language-text">To-do edited successfully</code></pre>
+<h2>Error Handling</h2>
+<p>If the ID doesn't exist:</p>
+<pre><code class="language-sh">echo -e "\nEdit unsuccessful. Make sure the to-do index exists."</code></pre>
+<p>The user sees:</p>
+<pre><code class="language-text">Edit unsuccessful. Make sure the to-do index exists.</code></pre>
 <h2>Example Walkthrough</h2>
-<h3>Before:</h3>
+<p>Suppose the list contains:</p>
 <pre><code class="language-text">1,Buy groceries,...
 2,Finish blog post,...
-3,Learn 
-
-shell scripting,...</code></pre>
-<p>User input:</p>
+3,Learn shell,...</code></pre>
+<p>User enters:</p>
 <pre><code class="language-text">2</code></pre>
-<p>System shows:</p>
+<p>Current task:</p>
 <pre><code class="language-text">Finish blog post</code></pre>
-<p>User confirms:</p>
-<pre><code class="language-text">y</code></pre>
-<h3>After:</h3>
-<pre><code class="language-text">
-id="ex5"
-1,Buy groceries,...
-3,Learn shell scripting,...</code></pre>
-<h2>Summary</h2>
-<p>The <code>delete()</code> function:</p>
-<ul>
-<li>Shows all tasks</li>
-<li>Prompts user for task ID</li>
-<li>Validates numeric input</li>
-<li>Displays task before deletion</li>
-<li>Asks for confirmation</li>
-<li>Removes matching line from file using <code>sed</code></li>
-<li>Confirms success or failure</li>
-</ul>
-<p>It is a simple but powerful way to permanently remove tasks from the to-do list file.</p>
-<p>In the seventh and final part of this series, we tackle the <code>reset()</code> function. So head over to <a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-7.html">Programming a To-Do List App With Shell Script (Part 7)</a></p>
+<p>User changes it to:</p>
+<pre><code class="language-text">Finish shell tutorial blog post</code></pre>
+<p>The function:</p>
+<ol>
+<li>Finds task 2.</li>
+<li>Preserves its creation date.</li>
+<li>Generates an update timestamp.</li>
+<li>Replaces the old record.</li>
+<li>Saves the changes to the file.</li>
+<li>Displays a success message.</li>
+</ol>
+<h3><code>edit()</code> Summary</h3>
+<p>The <code>edit()</code> function:</p>
+<ol>
+<li>Displays the current to-do list.</li>
+<li>Prompts the user for a task ID.</li>
+<li>Validates that the ID is numeric.</li>
+<li>Retrieves the existing task.</li>
+<li>Prompts for updated text.</li>
+<li>Preserves the original creation date.</li>
+<li>Records when the edit occurred.</li>
+<li>Replaces the old record in the file.</li>
+<li>Confirms success or reports an invalid ID.</li>
+</ol>
+<p>In the fifth part of this series, we tackle the <code>complete()</code> function. So head over to <a href="/blog/programming-to-do-list-app-bash-shell-script-part-5.html">Programming a To-Do List App With Shell Script (Part 5)</a></p>
         </article>
 
         <div class="w-full lg:w-1/4 m-auto mt-12 max-w-screen-sm">
 
           <div class="p-4 border-t border-b md:border md:rounded">
     <div class="flex py-2">
-      <img src="/images/codekzm/profile.jpg"
+      <img src="/images/blog/profile.jpg"
         class="h-10 w-10 rounded-full mr-2 object-cover" />
       <div>
         <p class="font-semibold text-gray-700 text-sm"> Code Kazeem </p>
@@ -358,15 +413,15 @@ id="ex5"
       <div class="p-8 bg-white border rounded shadow-sm">
       <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
       </p>
-      <a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-5.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 5)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 5)</a>
+      <a href="/blog/programming-to-do-list-app-bash-shell-script-part-7.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 7)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 7)</a>
       <p class="mb-5 text-gray-700">
         When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.      </p>
       <div class="flex items-center">
-        <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="mr-3">
-          <img src="/images/codekzm/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
+        <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="mr-3">
+          <img src="/images/blog/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
         </a>
         <div>
-          <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
+          <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
           <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
         </div>
       </div>
@@ -375,15 +430,15 @@ id="ex5"
       <div class="p-8 bg-white border rounded shadow-sm">
       <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
       </p>
-      <a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-4.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 4)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 4)</a>
+      <a href="/blog/programming-to-do-list-app-bash-shell-script-part-5.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 5)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 5)</a>
       <p class="mb-5 text-gray-700">
         When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.      </p>
       <div class="flex items-center">
-        <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="mr-3">
-          <img src="/images/codekzm/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
+        <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="mr-3">
+          <img src="/images/blog/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
         </a>
         <div>
-          <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
+          <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
           <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
         </div>
       </div>
@@ -392,15 +447,15 @@ id="ex5"
       <div class="p-8 bg-white border rounded shadow-sm">
       <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
       </p>
-      <a href="/codekzm/programming-to-do-list-app-bash-shell-script-part-4.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 4)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 4)</a>
+      <a href="/blog/programming-to-do-list-app-bash-shell-script-part-6.html" aria-label="Article" title="Programming a To-Do List App With Shell Script (Part 6)" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Programming a To-Do List App With Shell Script (Part 6)</a>
       <p class="mb-5 text-gray-700">
         When people think about building applications, they often reach for frameworks. However, some of the most useful programs can be created with nothing more than a shell script.      </p>
       <div class="flex items-center">
-        <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="mr-3">
-          <img src="/images/codekzm/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
+        <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="mr-3">
+          <img src="/images/blog/profile.jpg" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
         </a>
         <div>
-          <a href="/images/codekzm/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
+          <a href="/images/blog/profile.jpg" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Code Kazeem</a>
           <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
         </div>
       </div>
